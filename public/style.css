@@ -173,26 +173,7 @@ h1 em {
   min-width:225px;
 }
 .hero-aside p {
-  margin:0 0 9px;
-}
-.connection {
-  font:9px var(--mono);
-  color:#5d7561;
-  display:flex;
-  gap:7px;
-  align-items:center;
-}
-.connection i {
-  width:5px;
-  height:5px;
-  background:#739578;
-  border-radius:50%;
-}
-.connection.off {
-  color:#b46040;
-}
-.connection.off i {
-  background:#b46040;
+  margin:0;
 }
 .lab-layout {
   display:grid;
@@ -1070,17 +1051,7 @@ dialog a {
   }
   .hero-aside {
     padding:14px 0 0;
-    display:flex;
-    justify-content:space-between;
-    gap:12px;
-    align-items:center;
     font-size:10px;
-  }
-  .hero-aside p {
-    margin:0;
-  }
-  .connection {
-    font-size:8px;
   }
   .lab-layout {
     grid-template-columns:1fr;

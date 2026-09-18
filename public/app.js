@@ -278,11 +278,8 @@ reset();
 try {
   const response = await fetch('/api/status');
   const status = await response.json(); ready = response.ok && status.ready;
-  $('connection').replaceChildren(node('i'), document.createTextNode(ready ? 'OpenRouter · key ready' : 'API key needed'));
-  $('connection').classList.toggle('off', !ready);
   if (!ready) showError('Set OPENROUTER_API_KEY in the server environment, then restart. You can still explore the board.');
   render();
 } catch {
-  $('connection').textContent = 'Server unavailable'; $('connection').classList.add('off');
   showError('The local server is unavailable. Run npm start, then reload.');
 }

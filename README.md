@@ -2,7 +2,7 @@
 
 # Jev plays games.
 
-**Two boards. One decision model. Your move.**
+**Test your game playing skills against the speed demon...Jev!**
 
 <table>
   <tr>
@@ -11,8 +11,8 @@
   </tr>
 </table>
 
-Play against [Jev 1.13](https://openrouter.ai/typesafe/jev-1.13), or let it play itself.<br>
-Real API calls. Live choice scores. No promises of grandmaster play.
+Play against [Jev](https://openrouter.ai/typesafe/jev-1.13), or let it play itself.<br>
+See Jev's "thoughts" on what move to play. No promises of grandmaster play.
 
 [Get started](#get-started) · [How to play](#pick-your-seat) · [How it works](#inside-the-play-lab)
 
@@ -62,9 +62,3 @@ Turn on move sounds with **♪**, start over with **↺**, or **Export** the mov
 Jev reads text. It does not see a screenshot. The app supplies legal moves without engine scores or winning-move hints. **Choice probabilities are not win odds.**
 
 Plain JavaScript + a Node server + [chess.js](https://github.com/jhlywa/chess.js). No build step. The server calls OpenRouter’s native `/api/alpha/decisions` endpoint.
-
-## Lab notes
-
-- `npm test` — run the game and server checks. No API calls.
-- `npm run probe` — test six positions in both option orders. Makes **12 paid calls** and replaces `research/probes.json`.
-- [Early findings and sample runs](research/FINDINGS.md) — the wins, the misses, and a queen that did not last long.

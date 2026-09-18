@@ -8,8 +8,7 @@
   "scripts": {
     "start": "node --env-file-if-exists=.env server.mjs",
     "dev": "node --watch --env-file-if-exists=.env server.mjs",
-    "test": "node --test",
-    "probe": "node --env-file-if-exists=.env scripts/probe.mjs"
+    "test": "node --test"
   },
   "engines": { "node": ">=22.9" },
   "dependencies": { "chess.js": "1.4.0" }
