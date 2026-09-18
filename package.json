@@ -1,0 +1,16 @@
+{
+  "name": "jev-plays-games",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A live, inspectable game lab for TypeSafe Jev on OpenRouter.",
+  "repository": { "type": "git", "url": "https://github.com/vtrivedy/jev-plays-games.git" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "dev": "node --watch --env-file-if-exists=.env server.mjs",
+    "test": "node --test",
+    "probe": "node --env-file-if-exists=.env scripts/probe.mjs"
+  },
+  "engines": { "node": ">=22.9" },
+  "dependencies": { "chess.js": "1.4.0" }
+}

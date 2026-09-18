@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <defs>
+    <g id="base"><path d="M20 63h40l4 8H16z"/><path d="M23 58h34v5H23z"/></g>
+  </defs>
+  <symbol id="p" viewBox="0 0 80 80"><circle cx="40" cy="23" r="10"/><path d="M32 33h16l-3 7c0 8 3 14 9 18H26c6-4 9-10 9-18z"/><use href="#base"/></symbol>
+  <symbol id="r" viewBox="0 0 80 80"><path d="M20 14h10v9h6v-9h8v9h6v-9h10v19l-7 5 3 20H24l3-20-7-5z"/><path d="M26 33h28M28 40h24" fill="none"/><use href="#base"/></symbol>
+  <symbol id="b" viewBox="0 0 80 80"><circle cx="40" cy="11" r="3"/><path d="M40 15c-11 8-18 18-12 26 4 5 7 8 4 17h16c-3-9 0-12 4-17 6-8-1-18-12-26z"/><path d="m43 24-9 12M30 44h20" fill="none"/><use href="#base"/></symbol>
+  <symbol id="n" viewBox="0 0 80 80"><path d="m29 16 8 4 9-8 1 11c16 7 20 23 10 35H24c0-11 7-17 17-22l-10-1-8 8-9-7 7-17z"/><path d="M48 28c9 9 9 18 1 24M24 35l5-6" fill="none"/><circle cx="32" cy="25" r="2" fill="currentColor" stroke="none"/><use href="#base"/></symbol>
+  <symbol id="q" viewBox="0 0 80 80"><path d="m18 24 9 10 2-17 11 14 11-14 2 17 9-10-9 24 1 10H26l1-10z"/><path d="M28 47h24M27 52h26" fill="none"/><circle cx="17" cy="21" r="3"/><circle cx="29" cy="14" r="3"/><circle cx="40" cy="19" r="3"/><circle cx="51" cy="14" r="3"/><circle cx="63" cy="21" r="3"/><use href="#base"/></symbol>
+  <symbol id="k" viewBox="0 0 80 80"><path d="M37 9h6v6h6v5h-6v8h-6v-8h-6v-5h6z"/><path d="M40 32c-9-15-26-4-19 10l9 10-4 6h28l-4-6 9-10c7-14-10-25-19-10z"/><path d="M30 49h20M40 32v16" fill="none"/><use href="#base"/></symbol>
+</svg>

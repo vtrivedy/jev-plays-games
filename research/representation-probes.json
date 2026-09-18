@@ -1,0 +1,898 @@
+{
+  "date": "2026-09-18T17:04:25.722Z",
+  "note": "Exploratory representation variants; not used in the demo, not held-out evaluation.",
+  "results": [
+    {
+      "scenario": "win-now",
+      "format": "occupied-columns",
+      "order": "normal",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Red",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning.",
+          "occupied_columns_bottom_to_top": {
+            "column_1": [
+              "Red"
+            ],
+            "column_2": [
+              "Red"
+            ],
+            "column_3": [
+              "Red"
+            ],
+            "column_4": [],
+            "column_5": [],
+            "column_6": [
+              "Yellow"
+            ],
+            "column_7": [
+              "Yellow",
+              "Yellow"
+            ]
+          }
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Red. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a red disc into column 1.",
+              "2": "Drop a red disc into column 2.",
+              "3": "Drop a red disc into column 3.",
+              "4": "Drop a red disc into column 4.",
+              "5": "Drop a red disc into column 5.",
+              "6": "Drop a red disc into column 6.",
+              "7": "Drop a red disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "7",
+        "label": "7",
+        "description": "Drop a red disc into column 7.",
+        "confidence": 0.41,
+        "probabilities": [
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a red disc into column 7.",
+            "probability": 0.51
+          },
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a red disc into column 4.",
+            "probability": 0.16
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a red disc into column 6.",
+            "probability": 0.14
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a red disc into column 3.",
+            "probability": 0.1
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a red disc into column 1.",
+            "probability": 0.04
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a red disc into column 5.",
+            "probability": 0.03
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a red disc into column 2.",
+            "probability": 0.02
+          }
+        ],
+        "usage": {
+          "inputTokens": 648,
+          "outputTokens": 66,
+          "cost": 0.000027216
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 423,
+        "legalCount": 7,
+        "side": "Red"
+      },
+      "correct": false
+    },
+    {
+      "scenario": "win-now",
+      "format": "occupied-columns",
+      "order": "reversed",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Red",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning.",
+          "occupied_columns_bottom_to_top": {
+            "column_1": [
+              "Red"
+            ],
+            "column_2": [
+              "Red"
+            ],
+            "column_3": [
+              "Red"
+            ],
+            "column_4": [],
+            "column_5": [],
+            "column_6": [
+              "Yellow"
+            ],
+            "column_7": [
+              "Yellow",
+              "Yellow"
+            ]
+          }
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Red. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a red disc into column 1.",
+              "2": "Drop a red disc into column 2.",
+              "3": "Drop a red disc into column 3.",
+              "4": "Drop a red disc into column 4.",
+              "5": "Drop a red disc into column 5.",
+              "6": "Drop a red disc into column 6.",
+              "7": "Drop a red disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "7",
+        "label": "7",
+        "description": "Drop a red disc into column 7.",
+        "confidence": 0.45,
+        "probabilities": [
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a red disc into column 7.",
+            "probability": 0.53
+          },
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a red disc into column 4.",
+            "probability": 0.15
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a red disc into column 6.",
+            "probability": 0.14
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a red disc into column 3.",
+            "probability": 0.1
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a red disc into column 1.",
+            "probability": 0.04
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a red disc into column 5.",
+            "probability": 0.03
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a red disc into column 2.",
+            "probability": 0.01
+          }
+        ],
+        "usage": {
+          "inputTokens": 648,
+          "outputTokens": 66,
+          "cost": 0.000027216
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 256,
+        "legalCount": 7,
+        "side": "Red"
+      },
+      "correct": false
+    },
+    {
+      "scenario": "win-now",
+      "format": "plain-rows",
+      "order": "normal",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Red",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "board_rows_top_to_bottom": [
+            "Row 1: . . . . . . .",
+            "Row 2: . . . . . . .",
+            "Row 3: . . . . . . .",
+            "Row 4: . . . . . . .",
+            "Row 5: . . . . . . Y",
+            "Row 6: R R R . . Y Y"
+          ],
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Red. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a red disc into column 1.",
+              "2": "Drop a red disc into column 2.",
+              "3": "Drop a red disc into column 3.",
+              "4": "Drop a red disc into column 4.",
+              "5": "Drop a red disc into column 5.",
+              "6": "Drop a red disc into column 6.",
+              "7": "Drop a red disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "7",
+        "label": "7",
+        "description": "Drop a red disc into column 7.",
+        "confidence": 0.18,
+        "probabilities": [
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a red disc into column 7.",
+            "probability": 0.3
+          },
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a red disc into column 4.",
+            "probability": 0.22
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a red disc into column 6.",
+            "probability": 0.21
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a red disc into column 5.",
+            "probability": 0.12
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a red disc into column 3.",
+            "probability": 0.09
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a red disc into column 1.",
+            "probability": 0.05
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a red disc into column 2.",
+            "probability": 0.01
+          }
+        ],
+        "usage": {
+          "inputTokens": 650,
+          "outputTokens": 66,
+          "cost": 0.0000273
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 218,
+        "legalCount": 7,
+        "side": "Red"
+      },
+      "correct": false
+    },
+    {
+      "scenario": "win-now",
+      "format": "plain-rows",
+      "order": "reversed",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Red",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "board_rows_top_to_bottom": [
+            "Row 1: . . . . . . .",
+            "Row 2: . . . . . . .",
+            "Row 3: . . . . . . .",
+            "Row 4: . . . . . . .",
+            "Row 5: . . . . . . Y",
+            "Row 6: R R R . . Y Y"
+          ],
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Red. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a red disc into column 1.",
+              "2": "Drop a red disc into column 2.",
+              "3": "Drop a red disc into column 3.",
+              "4": "Drop a red disc into column 4.",
+              "5": "Drop a red disc into column 5.",
+              "6": "Drop a red disc into column 6.",
+              "7": "Drop a red disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "7",
+        "label": "7",
+        "description": "Drop a red disc into column 7.",
+        "confidence": 0.19,
+        "probabilities": [
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a red disc into column 7.",
+            "probability": 0.3
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a red disc into column 6.",
+            "probability": 0.22
+          },
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a red disc into column 4.",
+            "probability": 0.21
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a red disc into column 5.",
+            "probability": 0.11
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a red disc into column 3.",
+            "probability": 0.09
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a red disc into column 1.",
+            "probability": 0.06
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a red disc into column 2.",
+            "probability": 0.01
+          }
+        ],
+        "usage": {
+          "inputTokens": 650,
+          "outputTokens": 66,
+          "cost": 0.0000273
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 192,
+        "legalCount": 7,
+        "side": "Red"
+      },
+      "correct": false
+    },
+    {
+      "scenario": "block-now",
+      "format": "occupied-columns",
+      "order": "normal",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Yellow",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning.",
+          "occupied_columns_bottom_to_top": {
+            "column_1": [
+              "Red"
+            ],
+            "column_2": [
+              "Red"
+            ],
+            "column_3": [
+              "Red"
+            ],
+            "column_4": [],
+            "column_5": [],
+            "column_6": [],
+            "column_7": [
+              "Yellow",
+              "Yellow"
+            ]
+          }
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Yellow. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a yellow disc into column 1.",
+              "2": "Drop a yellow disc into column 2.",
+              "3": "Drop a yellow disc into column 3.",
+              "4": "Drop a yellow disc into column 4.",
+              "5": "Drop a yellow disc into column 5.",
+              "6": "Drop a yellow disc into column 6.",
+              "7": "Drop a yellow disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "7",
+        "label": "7",
+        "description": "Drop a yellow disc into column 7.",
+        "confidence": 0.53,
+        "probabilities": [
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a yellow disc into column 7.",
+            "probability": 0.59
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a yellow disc into column 3.",
+            "probability": 0.12
+          },
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a yellow disc into column 4.",
+            "probability": 0.12
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a yellow disc into column 6.",
+            "probability": 0.07
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a yellow disc into column 1.",
+            "probability": 0.06
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a yellow disc into column 5.",
+            "probability": 0.03
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a yellow disc into column 2.",
+            "probability": 0.01
+          }
+        ],
+        "usage": {
+          "inputTokens": 645,
+          "outputTokens": 66,
+          "cost": 0.00002709
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 277,
+        "legalCount": 7,
+        "side": "Yellow"
+      },
+      "correct": false
+    },
+    {
+      "scenario": "block-now",
+      "format": "occupied-columns",
+      "order": "reversed",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Yellow",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning.",
+          "occupied_columns_bottom_to_top": {
+            "column_1": [
+              "Red"
+            ],
+            "column_2": [
+              "Red"
+            ],
+            "column_3": [
+              "Red"
+            ],
+            "column_4": [],
+            "column_5": [],
+            "column_6": [],
+            "column_7": [
+              "Yellow",
+              "Yellow"
+            ]
+          }
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Yellow. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a yellow disc into column 1.",
+              "2": "Drop a yellow disc into column 2.",
+              "3": "Drop a yellow disc into column 3.",
+              "4": "Drop a yellow disc into column 4.",
+              "5": "Drop a yellow disc into column 5.",
+              "6": "Drop a yellow disc into column 6.",
+              "7": "Drop a yellow disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "7",
+        "label": "7",
+        "description": "Drop a yellow disc into column 7.",
+        "confidence": 0.54,
+        "probabilities": [
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a yellow disc into column 7.",
+            "probability": 0.61
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a yellow disc into column 3.",
+            "probability": 0.12
+          },
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a yellow disc into column 4.",
+            "probability": 0.11
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a yellow disc into column 6.",
+            "probability": 0.06
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a yellow disc into column 1.",
+            "probability": 0.05
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a yellow disc into column 5.",
+            "probability": 0.03
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a yellow disc into column 2.",
+            "probability": 0.02
+          }
+        ],
+        "usage": {
+          "inputTokens": 645,
+          "outputTokens": 66,
+          "cost": 0.00002709
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 192,
+        "legalCount": 7,
+        "side": "Yellow"
+      },
+      "correct": false
+    },
+    {
+      "scenario": "block-now",
+      "format": "plain-rows",
+      "order": "normal",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Yellow",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "board_rows_top_to_bottom": [
+            "Row 1: . . . . . . .",
+            "Row 2: . . . . . . .",
+            "Row 3: . . . . . . .",
+            "Row 4: . . . . . . .",
+            "Row 5: . . . . . . Y",
+            "Row 6: R R R . . . Y"
+          ],
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Yellow. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a yellow disc into column 1.",
+              "2": "Drop a yellow disc into column 2.",
+              "3": "Drop a yellow disc into column 3.",
+              "4": "Drop a yellow disc into column 4.",
+              "5": "Drop a yellow disc into column 5.",
+              "6": "Drop a yellow disc into column 6.",
+              "7": "Drop a yellow disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "4",
+        "label": "4",
+        "description": "Drop a yellow disc into column 4.",
+        "confidence": 0.51,
+        "probabilities": [
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a yellow disc into column 4.",
+            "probability": 0.58
+          },
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a yellow disc into column 7.",
+            "probability": 0.19
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a yellow disc into column 6.",
+            "probability": 0.09
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a yellow disc into column 3.",
+            "probability": 0.07
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a yellow disc into column 5.",
+            "probability": 0.03
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a yellow disc into column 1.",
+            "probability": 0.02
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a yellow disc into column 2.",
+            "probability": 0.02
+          }
+        ],
+        "usage": {
+          "inputTokens": 650,
+          "outputTokens": 66,
+          "cost": 0.0000273
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 551,
+        "legalCount": 7,
+        "side": "Yellow"
+      },
+      "correct": true
+    },
+    {
+      "scenario": "block-now",
+      "format": "plain-rows",
+      "order": "reversed",
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Yellow",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "board_rows_top_to_bottom": [
+            "Row 1: . . . . . . .",
+            "Row 2: . . . . . . .",
+            "Row 3: . . . . . . .",
+            "Row 4: . . . . . . .",
+            "Row 5: . . . . . . Y",
+            "Row 6: R R R . . . Y"
+          ],
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Yellow. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a yellow disc into column 1.",
+              "2": "Drop a yellow disc into column 2.",
+              "3": "Drop a yellow disc into column 3.",
+              "4": "Drop a yellow disc into column 4.",
+              "5": "Drop a yellow disc into column 5.",
+              "6": "Drop a yellow disc into column 6.",
+              "7": "Drop a yellow disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "4",
+        "label": "4",
+        "description": "Drop a yellow disc into column 4.",
+        "confidence": 0.48,
+        "probabilities": [
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a yellow disc into column 4.",
+            "probability": 0.56
+          },
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a yellow disc into column 7.",
+            "probability": 0.21
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a yellow disc into column 6.",
+            "probability": 0.11
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a yellow disc into column 3.",
+            "probability": 0.06
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a yellow disc into column 5.",
+            "probability": 0.03
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a yellow disc into column 1.",
+            "probability": 0.02
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a yellow disc into column 2.",
+            "probability": 0.01
+          }
+        ],
+        "usage": {
+          "inputTokens": 650,
+          "outputTokens": 66,
+          "cost": 0.0000273
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 212,
+        "legalCount": 7,
+        "side": "Yellow"
+      },
+      "correct": true
+    }
+  ]
+}

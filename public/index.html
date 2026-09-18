@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f4ed">
+  <meta name="description" content="Can a fast decision model play chess? Watch Jev choose real moves, live.">
+  <title>Can Jev play? — The play lab</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='24' width='100' height='100' fill='%23ed5835'/%3E%3Ctext x='28' y='74' font-size='85' font-family='Georgia' fill='white'%3Ej%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Jev play lab home"><span class="brand-mark">j.</span><span>the play lab<span class="brand-sub">AN EXPERIMENT WITH JEV 1.13</span></span></a>
+    <nav class="game-tabs" aria-label="Choose a game"><button data-game="chess" class="active" aria-pressed="true">01 <span>Chess</span></button><button data-game="connect" aria-pressed="false">02 <span>Connect Four</span></button></nav>
+    <button id="about-button" class="text-button">Under the hood <span>↗</span></button>
+  </header>
+  <main>
+    <section class="hero">
+      <div><div class="eyebrow"><span class="tiny-cross">✳</span> SMALL MODEL. BIG MOVES.</div><h1>Can Jev play <em id="game-title">chess?</em></h1></div>
+      <div class="hero-aside"><p>Legal moves in. One choice out.<br>Let’s see what happens.</p><span class="connection" id="connection"><i></i> Checking API…</span></div>
+    </section>
+    <div class="lab-layout">
+      <section class="arena" aria-label="Game board and controls">
+        <div class="arena-toolbar"><div class="live-label"><span class="dot"></span> THE ARENA</div><div class="mode-switch" aria-label="Play mode"><button data-mode="human" class="active" aria-pressed="true">You vs Jev</button><button data-mode="watch" aria-pressed="false">Jev vs Jev</button></div></div>
+        <div class="player-line top-player"><div class="player-avatar bot-avatar">j.</div><div class="player-info"><strong id="top-name">Jev 1.13</strong><span id="top-side">BLACK PIECES</span></div><span class="player-state" id="top-state">Waiting</span></div>
+        <div id="board-wrap" class="board-wrap"><div id="board" class="board chess-board" aria-label="Chess board"></div></div>
+        <div class="player-line bottom-player"><div class="player-avatar human-avatar" id="bottom-avatar">Y</div><div class="player-info"><strong id="bottom-name">You</strong><span id="bottom-side">WHITE PIECES</span></div><span class="player-state" id="bottom-state">Your move</span></div>
+        <div class="play-controls"><button class="primary-button" id="play-button"><span>✦</span> Ask Jev to move</button><button id="reset-button" class="icon-button" aria-label="Reset board" title="Reset board">↺</button><button id="sound-button" class="icon-button" aria-label="Turn move sounds on" aria-pressed="false" title="Turn move sounds on">♪</button></div>
+        <p id="board-note" class="board-note" aria-live="polite">Click a white piece, then a highlighted square.</p>
+      </section>
+      <aside class="lab-sidebar">
+        <section class="decision-panel" aria-label="Jev decision details">
+          <div class="panel-heading"><span class="eyebrow">INSIDE THE DECISION</span><span id="live-badge" class="live-badge">LIVE API</span></div>
+          <div class="decision-heading"><div><span id="decision-caption" class="muted-label">JEV’S NEXT MOVE</span><h2 id="chosen-move">Your move<span class="small-arrow">↙</span></h2></div><div class="decision-spark">✳</div></div>
+          <p id="decision-description" class="decision-description">Make a move. Then watch Jev choose its reply.</p>
+          <div class="candidate-heading"><span>TOP CHOICES</span><span>PROBABILITY</span></div>
+          <div id="candidates" class="candidates"><div class="empty-candidates"><span class="ghost-bar"></span><span class="ghost-bar"></span><span class="ghost-bar"></span><p>The options will appear here.</p></div></div>
+          <p class="probability-note">Choice probability ≠ chance of winning.</p>
+          <div class="decision-stats"><div><span>API ROUND TRIP</span><strong id="latency">—<small> ms</small></strong></div><div><span>CONFIDENCE</span><strong id="confidence">—</strong></div></div>
+        </section>
+        <section class="setup-panel"><div class="panel-heading"><h2>Set the scene</h2><span class="index-label">01 / START HERE</span></div><label class="sr-only" for="scenario">Starting position</label><select id="scenario"></select><p id="scenario-note"></p><div class="setup-foot"><span>LEGAL ACTIONS <strong id="legal-count">20</strong></span><span id="turn-label">WHITE TO MOVE</span></div></section>
+        <section class="log-panel"><div class="panel-heading"><h2>The move reel</h2><button id="export-button" class="text-button small" title="Download moves and API results">Export ↗</button></div><div id="move-log" class="move-log"><p class="empty-log">Every great game starts somewhere.</p></div><div class="session-stats"><span><strong id="call-count">0</strong> API calls</span><span id="session-cost">$0.000000</span></div></section>
+      </aside>
+    </div>
+    <footer class="lab-footer"><span>THE LOOP <b>Board</b> <i>→</i> <b>Legal moves</b> <i>→</i> <b>Jev chooses</b> <i>→</i> <b>Play</b></span><span>REAL MOVES. REAL MODEL. OPEN EXPERIMENT.</span></footer>
+    <div id="error-message" class="error-message" role="alert" hidden></div>
+  </main>
+  <dialog id="about-dialog"><button id="close-about" class="dialog-close" aria-label="Close">×</button><div class="eyebrow">WHAT ARE WE TESTING?</div><h2>A choice, then a move.</h2><p>Jev is a decision model from TypeSafe. It takes text and picks from a set of options. It does not see the board image.</p><ol><li>The app sends the board state and every legal move.</li><li>Jev picks one move and returns a probability for each option.</li><li>The app checks that choice, then moves the piece.</li></ol><p>No chess engine scores, search results, or mate markers go into the options. The chess rules library handles legality. The scores in the panel show Jev’s choice distribution, not chess strength or win odds.</p><h3>Made for a quick experiment</h3><p>Try “Find the finish” for a one-move test. Switch to “Jev vs Jev” for a live match. Auto-play pauses after 80 turns. You can export every recorded move and API result.</p><p>Chess is a hard test of planning. Connect Four is easier to explain in a short video. Neither is a measured benchmark of this model.</p><a href="https://docs.typesafe.ai/primitives/choice" target="_blank" rel="noreferrer">Read the Choice API docs ↗</a></dialog>
+  <dialog id="promotion-dialog"><div class="eyebrow">YOUR PAWN MADE IT</div><h2>Choose a piece.</h2><div id="promotion-options"></div><button id="cancel-promotion" class="text-button">Cancel</button></dialog>
+</body>
+</html>

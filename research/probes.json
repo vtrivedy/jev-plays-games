@@ -1,0 +1,2404 @@
+{
+  "date": "2026-09-18T17:03:07.254Z",
+  "model": "typesafe/jev-1.13",
+  "note": "Small exploratory sample. No strength or Elo claim. All calls use the UI action contract; option order is reversed for the second call.",
+  "summary": {
+    "attempts": 12,
+    "successful": 12,
+    "tacticalChecks": 8,
+    "tacticalCorrect": 7,
+    "medianMs": 241,
+    "totalReportedCost": 0.0004803960000000001
+  },
+  "results": [
+    {
+      "game": "chess",
+      "scenario": "opening",
+      "order": "normal",
+      "expected": null,
+      "passed": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "chess",
+          "side_to_move": "White",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "pieces": {
+            "white": [
+              "pawn on a2",
+              "pawn on b2",
+              "pawn on c2",
+              "pawn on d2",
+              "pawn on e2",
+              "pawn on f2",
+              "pawn on g2",
+              "pawn on h2",
+              "rook on a1",
+              "knight on b1",
+              "bishop on c1",
+              "queen on d1",
+              "king on e1",
+              "bishop on f1",
+              "knight on g1",
+              "rook on h1"
+            ],
+            "black": [
+              "rook on a8",
+              "knight on b8",
+              "bishop on c8",
+              "queen on d8",
+              "king on e8",
+              "bishop on f8",
+              "knight on g8",
+              "rook on h8",
+              "pawn on a7",
+              "pawn on b7",
+              "pawn on c7",
+              "pawn on d7",
+              "pawn on e7",
+              "pawn on f7",
+              "pawn on g7",
+              "pawn on h7"
+            ]
+          },
+          "recent_moves": [],
+          "goal": "Win by checkmate. Choose your own move from the legal options."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest chess move for White in this position. Select one of the legal moves. Aim to win by checkmate; protect your king and pieces.",
+            "criteria": {
+              "a2a3": "Move white pawn from a2 to a3.",
+              "a2a4": "Move white pawn from a2 to a4.",
+              "b2b3": "Move white pawn from b2 to b3.",
+              "b2b4": "Move white pawn from b2 to b4.",
+              "c2c3": "Move white pawn from c2 to c3.",
+              "c2c4": "Move white pawn from c2 to c4.",
+              "d2d3": "Move white pawn from d2 to d3.",
+              "d2d4": "Move white pawn from d2 to d4.",
+              "e2e3": "Move white pawn from e2 to e3.",
+              "e2e4": "Move white pawn from e2 to e4.",
+              "f2f3": "Move white pawn from f2 to f3.",
+              "f2f4": "Move white pawn from f2 to f4.",
+              "g2g3": "Move white pawn from g2 to g3.",
+              "g2g4": "Move white pawn from g2 to g4.",
+              "h2h3": "Move white pawn from h2 to h3.",
+              "h2h4": "Move white pawn from h2 to h4.",
+              "b1a3": "Move white knight from b1 to a3.",
+              "b1c3": "Move white knight from b1 to c3.",
+              "g1f3": "Move white knight from g1 to f3.",
+              "g1h3": "Move white knight from g1 to h3."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "e2e4",
+        "label": "e4",
+        "description": "Move white pawn from e2 to e4.",
+        "confidence": 0.81,
+        "probabilities": [
+          {
+            "id": "e2e4",
+            "label": "e4",
+            "description": "Move white pawn from e2 to e4.",
+            "probability": 0.83
+          },
+          {
+            "id": "d2d4",
+            "label": "d4",
+            "description": "Move white pawn from d2 to d4.",
+            "probability": 0.09999999999999999
+          },
+          {
+            "id": "g1f3",
+            "label": "Nf3",
+            "description": "Move white knight from g1 to f3.",
+            "probability": 0.03
+          },
+          {
+            "id": "b1c3",
+            "label": "Nc3",
+            "description": "Move white knight from b1 to c3.",
+            "probability": 0.02
+          },
+          {
+            "id": "c2c4",
+            "label": "c4",
+            "description": "Move white pawn from c2 to c4.",
+            "probability": 0.01
+          },
+          {
+            "id": "e2e3",
+            "label": "e3",
+            "description": "Move white pawn from e2 to e3.",
+            "probability": 0.01
+          },
+          {
+            "id": "a2a3",
+            "label": "a3",
+            "description": "Move white pawn from a2 to a3.",
+            "probability": 0
+          },
+          {
+            "id": "a2a4",
+            "label": "a4",
+            "description": "Move white pawn from a2 to a4.",
+            "probability": 0
+          },
+          {
+            "id": "b2b3",
+            "label": "b3",
+            "description": "Move white pawn from b2 to b3.",
+            "probability": 0
+          },
+          {
+            "id": "b2b4",
+            "label": "b4",
+            "description": "Move white pawn from b2 to b4.",
+            "probability": 0
+          },
+          {
+            "id": "c2c3",
+            "label": "c3",
+            "description": "Move white pawn from c2 to c3.",
+            "probability": 0
+          },
+          {
+            "id": "d2d3",
+            "label": "d3",
+            "description": "Move white pawn from d2 to d3.",
+            "probability": 0
+          },
+          {
+            "id": "f2f3",
+            "label": "f3",
+            "description": "Move white pawn from f2 to f3.",
+            "probability": 0
+          },
+          {
+            "id": "f2f4",
+            "label": "f4",
+            "description": "Move white pawn from f2 to f4.",
+            "probability": 0
+          },
+          {
+            "id": "g2g3",
+            "label": "g3",
+            "description": "Move white pawn from g2 to g3.",
+            "probability": 0
+          },
+          {
+            "id": "g2g4",
+            "label": "g4",
+            "description": "Move white pawn from g2 to g4.",
+            "probability": 0
+          },
+          {
+            "id": "h2h3",
+            "label": "h3",
+            "description": "Move white pawn from h2 to h3.",
+            "probability": 0
+          },
+          {
+            "id": "h2h4",
+            "label": "h4",
+            "description": "Move white pawn from h2 to h4.",
+            "probability": 0
+          },
+          {
+            "id": "b1a3",
+            "label": "Na3",
+            "description": "Move white knight from b1 to a3.",
+            "probability": 0
+          },
+          {
+            "id": "g1h3",
+            "label": "Nh3",
+            "description": "Move white knight from g1 to h3.",
+            "probability": 0
+          }
+        ],
+        "usage": {
+          "inputTokens": 1133,
+          "outputTokens": 220,
+          "cost": 0.000047586
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 461,
+        "legalCount": 20,
+        "side": "White"
+      },
+      "outcome": null
+    },
+    {
+      "game": "chess",
+      "scenario": "opening",
+      "order": "reversed",
+      "expected": null,
+      "passed": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "chess",
+          "side_to_move": "White",
+          "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+          "pieces": {
+            "white": [
+              "pawn on a2",
+              "pawn on b2",
+              "pawn on c2",
+              "pawn on d2",
+              "pawn on e2",
+              "pawn on f2",
+              "pawn on g2",
+              "pawn on h2",
+              "rook on a1",
+              "knight on b1",
+              "bishop on c1",
+              "queen on d1",
+              "king on e1",
+              "bishop on f1",
+              "knight on g1",
+              "rook on h1"
+            ],
+            "black": [
+              "rook on a8",
+              "knight on b8",
+              "bishop on c8",
+              "queen on d8",
+              "king on e8",
+              "bishop on f8",
+              "knight on g8",
+              "rook on h8",
+              "pawn on a7",
+              "pawn on b7",
+              "pawn on c7",
+              "pawn on d7",
+              "pawn on e7",
+              "pawn on f7",
+              "pawn on g7",
+              "pawn on h7"
+            ]
+          },
+          "recent_moves": [],
+          "goal": "Win by checkmate. Choose your own move from the legal options."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest chess move for White in this position. Select one of the legal moves. Aim to win by checkmate; protect your king and pieces.",
+            "criteria": {
+              "g1h3": "Move white knight from g1 to h3.",
+              "g1f3": "Move white knight from g1 to f3.",
+              "b1c3": "Move white knight from b1 to c3.",
+              "b1a3": "Move white knight from b1 to a3.",
+              "h2h4": "Move white pawn from h2 to h4.",
+              "h2h3": "Move white pawn from h2 to h3.",
+              "g2g4": "Move white pawn from g2 to g4.",
+              "g2g3": "Move white pawn from g2 to g3.",
+              "f2f4": "Move white pawn from f2 to f4.",
+              "f2f3": "Move white pawn from f2 to f3.",
+              "e2e4": "Move white pawn from e2 to e4.",
+              "e2e3": "Move white pawn from e2 to e3.",
+              "d2d4": "Move white pawn from d2 to d4.",
+              "d2d3": "Move white pawn from d2 to d3.",
+              "c2c4": "Move white pawn from c2 to c4.",
+              "c2c3": "Move white pawn from c2 to c3.",
+              "b2b4": "Move white pawn from b2 to b4.",
+              "b2b3": "Move white pawn from b2 to b3.",
+              "a2a4": "Move white pawn from a2 to a4.",
+              "a2a3": "Move white pawn from a2 to a3."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "e2e4",
+        "label": "e4",
+        "description": "Move white pawn from e2 to e4.",
+        "confidence": 0.55,
+        "probabilities": [
+          {
+            "id": "e2e4",
+            "label": "e4",
+            "description": "Move white pawn from e2 to e4.",
+            "probability": 0.59
+          },
+          {
+            "id": "d2d4",
+            "label": "d4",
+            "description": "Move white pawn from d2 to d4.",
+            "probability": 0.21000000000000002
+          },
+          {
+            "id": "g1f3",
+            "label": "Nf3",
+            "description": "Move white knight from g1 to f3.",
+            "probability": 0.14
+          },
+          {
+            "id": "b1c3",
+            "label": "Nc3",
+            "description": "Move white knight from b1 to c3.",
+            "probability": 0.04
+          },
+          {
+            "id": "e2e3",
+            "label": "e3",
+            "description": "Move white pawn from e2 to e3.",
+            "probability": 0.01
+          },
+          {
+            "id": "d2d3",
+            "label": "d3",
+            "description": "Move white pawn from d2 to d3.",
+            "probability": 0.01
+          },
+          {
+            "id": "g1h3",
+            "label": "Nh3",
+            "description": "Move white knight from g1 to h3.",
+            "probability": 0
+          },
+          {
+            "id": "b1a3",
+            "label": "Na3",
+            "description": "Move white knight from b1 to a3.",
+            "probability": 0
+          },
+          {
+            "id": "h2h4",
+            "label": "h4",
+            "description": "Move white pawn from h2 to h4.",
+            "probability": 0
+          },
+          {
+            "id": "h2h3",
+            "label": "h3",
+            "description": "Move white pawn from h2 to h3.",
+            "probability": 0
+          },
+          {
+            "id": "g2g4",
+            "label": "g4",
+            "description": "Move white pawn from g2 to g4.",
+            "probability": 0
+          },
+          {
+            "id": "g2g3",
+            "label": "g3",
+            "description": "Move white pawn from g2 to g3.",
+            "probability": 0
+          },
+          {
+            "id": "f2f4",
+            "label": "f4",
+            "description": "Move white pawn from f2 to f4.",
+            "probability": 0
+          },
+          {
+            "id": "f2f3",
+            "label": "f3",
+            "description": "Move white pawn from f2 to f3.",
+            "probability": 0
+          },
+          {
+            "id": "c2c4",
+            "label": "c4",
+            "description": "Move white pawn from c2 to c4.",
+            "probability": 0
+          },
+          {
+            "id": "c2c3",
+            "label": "c3",
+            "description": "Move white pawn from c2 to c3.",
+            "probability": 0
+          },
+          {
+            "id": "b2b4",
+            "label": "b4",
+            "description": "Move white pawn from b2 to b4.",
+            "probability": 0
+          },
+          {
+            "id": "b2b3",
+            "label": "b3",
+            "description": "Move white pawn from b2 to b3.",
+            "probability": 0
+          },
+          {
+            "id": "a2a4",
+            "label": "a4",
+            "description": "Move white pawn from a2 to a4.",
+            "probability": 0
+          },
+          {
+            "id": "a2a3",
+            "label": "a3",
+            "description": "Move white pawn from a2 to a3.",
+            "probability": 0
+          }
+        ],
+        "usage": {
+          "inputTokens": 1133,
+          "outputTokens": 220,
+          "cost": 0.000047586
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 223,
+        "legalCount": 20,
+        "side": "White"
+      },
+      "outcome": null
+    },
+    {
+      "game": "chess",
+      "scenario": "fools-mate",
+      "order": "normal",
+      "expected": "d8h4",
+      "passed": true,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "chess",
+          "side_to_move": "Black",
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/6P1/5P2/PPPPP2P/RNBQKBNR b KQkq - 0 2",
+          "pieces": {
+            "white": [
+              "pawn on g4",
+              "pawn on f3",
+              "pawn on a2",
+              "pawn on b2",
+              "pawn on c2",
+              "pawn on d2",
+              "pawn on e2",
+              "pawn on h2",
+              "rook on a1",
+              "knight on b1",
+              "bishop on c1",
+              "queen on d1",
+              "king on e1",
+              "bishop on f1",
+              "knight on g1",
+              "rook on h1"
+            ],
+            "black": [
+              "rook on a8",
+              "knight on b8",
+              "bishop on c8",
+              "queen on d8",
+              "king on e8",
+              "bishop on f8",
+              "knight on g8",
+              "rook on h8",
+              "pawn on a7",
+              "pawn on b7",
+              "pawn on c7",
+              "pawn on d7",
+              "pawn on f7",
+              "pawn on g7",
+              "pawn on h7",
+              "pawn on e5"
+            ]
+          },
+          "recent_moves": [],
+          "goal": "Win by checkmate. Choose your own move from the legal options."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest chess move for Black in this position. Select one of the legal moves. Aim to win by checkmate; protect your king and pieces.",
+            "criteria": {
+              "b8c6": "Move black knight from b8 to c6.",
+              "b8a6": "Move black knight from b8 to a6.",
+              "d8e7": "Move black queen from d8 to e7.",
+              "d8f6": "Move black queen from d8 to f6.",
+              "d8g5": "Move black queen from d8 to g5.",
+              "d8h4": "Move black queen from d8 to h4.",
+              "e8e7": "Move black king from e8 to e7.",
+              "f8e7": "Move black bishop from f8 to e7.",
+              "f8d6": "Move black bishop from f8 to d6.",
+              "f8c5": "Move black bishop from f8 to c5.",
+              "f8b4": "Move black bishop from f8 to b4.",
+              "f8a3": "Move black bishop from f8 to a3.",
+              "g8h6": "Move black knight from g8 to h6.",
+              "g8f6": "Move black knight from g8 to f6.",
+              "g8e7": "Move black knight from g8 to e7.",
+              "a7a6": "Move black pawn from a7 to a6.",
+              "a7a5": "Move black pawn from a7 to a5.",
+              "b7b6": "Move black pawn from b7 to b6.",
+              "b7b5": "Move black pawn from b7 to b5.",
+              "c7c6": "Move black pawn from c7 to c6.",
+              "c7c5": "Move black pawn from c7 to c5.",
+              "d7d6": "Move black pawn from d7 to d6.",
+              "d7d5": "Move black pawn from d7 to d5.",
+              "f7f6": "Move black pawn from f7 to f6.",
+              "f7f5": "Move black pawn from f7 to f5.",
+              "g7g6": "Move black pawn from g7 to g6.",
+              "g7g5": "Move black pawn from g7 to g5.",
+              "h7h6": "Move black pawn from h7 to h6.",
+              "h7h5": "Move black pawn from h7 to h5.",
+              "e5e4": "Move black pawn from e5 to e4."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "d8h4",
+        "label": "Qh4#",
+        "description": "Move black queen from d8 to h4.",
+        "confidence": 0.31,
+        "probabilities": [
+          {
+            "id": "d8h4",
+            "label": "Qh4#",
+            "description": "Move black queen from d8 to h4.",
+            "probability": 0.35000000000000003
+          },
+          {
+            "id": "g8f6",
+            "label": "Nf6",
+            "description": "Move black knight from g8 to f6.",
+            "probability": 0.19
+          },
+          {
+            "id": "d8g5",
+            "label": "Qg5",
+            "description": "Move black queen from d8 to g5.",
+            "probability": 0.15
+          },
+          {
+            "id": "d7d5",
+            "label": "d5",
+            "description": "Move black pawn from d7 to d5.",
+            "probability": 0.06
+          },
+          {
+            "id": "e5e4",
+            "label": "e4",
+            "description": "Move black pawn from e5 to e4.",
+            "probability": 0.05
+          },
+          {
+            "id": "d8f6",
+            "label": "Qf6",
+            "description": "Move black queen from d8 to f6.",
+            "probability": 0.03
+          },
+          {
+            "id": "g7g5",
+            "label": "g5",
+            "description": "Move black pawn from g7 to g5.",
+            "probability": 0.03
+          },
+          {
+            "id": "b8c6",
+            "label": "Nc6",
+            "description": "Move black knight from b8 to c6.",
+            "probability": 0.02
+          },
+          {
+            "id": "f8c5",
+            "label": "Bc5",
+            "description": "Move black bishop from f8 to c5.",
+            "probability": 0.02
+          },
+          {
+            "id": "f8b4",
+            "label": "Bb4",
+            "description": "Move black bishop from f8 to b4.",
+            "probability": 0.02
+          },
+          {
+            "id": "f7f5",
+            "label": "f5",
+            "description": "Move black pawn from f7 to f5.",
+            "probability": 0.02
+          },
+          {
+            "id": "a7a6",
+            "label": "a6",
+            "description": "Move black pawn from a7 to a6.",
+            "probability": 0.01
+          },
+          {
+            "id": "c7c5",
+            "label": "c5",
+            "description": "Move black pawn from c7 to c5.",
+            "probability": 0.01
+          },
+          {
+            "id": "d7d6",
+            "label": "d6",
+            "description": "Move black pawn from d7 to d6.",
+            "probability": 0.01
+          },
+          {
+            "id": "f7f6",
+            "label": "f6",
+            "description": "Move black pawn from f7 to f6.",
+            "probability": 0.01
+          },
+          {
+            "id": "g7g6",
+            "label": "g6",
+            "description": "Move black pawn from g7 to g6.",
+            "probability": 0.01
+          },
+          {
+            "id": "h7h5",
+            "label": "h5",
+            "description": "Move black pawn from h7 to h5.",
+            "probability": 0.01
+          },
+          {
+            "id": "b8a6",
+            "label": "Na6",
+            "description": "Move black knight from b8 to a6.",
+            "probability": 0
+          },
+          {
+            "id": "d8e7",
+            "label": "Qe7",
+            "description": "Move black queen from d8 to e7.",
+            "probability": 0
+          },
+          {
+            "id": "e8e7",
+            "label": "Ke7",
+            "description": "Move black king from e8 to e7.",
+            "probability": 0
+          },
+          {
+            "id": "f8e7",
+            "label": "Be7",
+            "description": "Move black bishop from f8 to e7.",
+            "probability": 0
+          },
+          {
+            "id": "f8d6",
+            "label": "Bd6",
+            "description": "Move black bishop from f8 to d6.",
+            "probability": 0
+          },
+          {
+            "id": "f8a3",
+            "label": "Ba3",
+            "description": "Move black bishop from f8 to a3.",
+            "probability": 0
+          },
+          {
+            "id": "g8h6",
+            "label": "Nh6",
+            "description": "Move black knight from g8 to h6.",
+            "probability": 0
+          },
+          {
+            "id": "g8e7",
+            "label": "Ne7",
+            "description": "Move black knight from g8 to e7.",
+            "probability": 0
+          },
+          {
+            "id": "a7a5",
+            "label": "a5",
+            "description": "Move black pawn from a7 to a5.",
+            "probability": 0
+          },
+          {
+            "id": "b7b6",
+            "label": "b6",
+            "description": "Move black pawn from b7 to b6.",
+            "probability": 0
+          },
+          {
+            "id": "b7b5",
+            "label": "b5",
+            "description": "Move black pawn from b7 to b5.",
+            "probability": 0
+          },
+          {
+            "id": "c7c6",
+            "label": "c6",
+            "description": "Move black pawn from c7 to c6.",
+            "probability": 0
+          },
+          {
+            "id": "h7h6",
+            "label": "h6",
+            "description": "Move black pawn from h7 to h6.",
+            "probability": 0
+          }
+        ],
+        "usage": {
+          "inputTokens": 1380,
+          "outputTokens": 320,
+          "cost": 0.00005796
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 309,
+        "legalCount": 30,
+        "side": "Black"
+      },
+      "outcome": {
+        "winner": "Black",
+        "reason": "Checkmate"
+      }
+    },
+    {
+      "game": "chess",
+      "scenario": "fools-mate",
+      "order": "reversed",
+      "expected": "d8h4",
+      "passed": true,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "chess",
+          "side_to_move": "Black",
+          "fen": "rnbqkbnr/pppp1ppp/8/4p3/6P1/5P2/PPPPP2P/RNBQKBNR b KQkq - 0 2",
+          "pieces": {
+            "white": [
+              "pawn on g4",
+              "pawn on f3",
+              "pawn on a2",
+              "pawn on b2",
+              "pawn on c2",
+              "pawn on d2",
+              "pawn on e2",
+              "pawn on h2",
+              "rook on a1",
+              "knight on b1",
+              "bishop on c1",
+              "queen on d1",
+              "king on e1",
+              "bishop on f1",
+              "knight on g1",
+              "rook on h1"
+            ],
+            "black": [
+              "rook on a8",
+              "knight on b8",
+              "bishop on c8",
+              "queen on d8",
+              "king on e8",
+              "bishop on f8",
+              "knight on g8",
+              "rook on h8",
+              "pawn on a7",
+              "pawn on b7",
+              "pawn on c7",
+              "pawn on d7",
+              "pawn on f7",
+              "pawn on g7",
+              "pawn on h7",
+              "pawn on e5"
+            ]
+          },
+          "recent_moves": [],
+          "goal": "Win by checkmate. Choose your own move from the legal options."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest chess move for Black in this position. Select one of the legal moves. Aim to win by checkmate; protect your king and pieces.",
+            "criteria": {
+              "e5e4": "Move black pawn from e5 to e4.",
+              "h7h5": "Move black pawn from h7 to h5.",
+              "h7h6": "Move black pawn from h7 to h6.",
+              "g7g5": "Move black pawn from g7 to g5.",
+              "g7g6": "Move black pawn from g7 to g6.",
+              "f7f5": "Move black pawn from f7 to f5.",
+              "f7f6": "Move black pawn from f7 to f6.",
+              "d7d5": "Move black pawn from d7 to d5.",
+              "d7d6": "Move black pawn from d7 to d6.",
+              "c7c5": "Move black pawn from c7 to c5.",
+              "c7c6": "Move black pawn from c7 to c6.",
+              "b7b5": "Move black pawn from b7 to b5.",
+              "b7b6": "Move black pawn from b7 to b6.",
+              "a7a5": "Move black pawn from a7 to a5.",
+              "a7a6": "Move black pawn from a7 to a6.",
+              "g8e7": "Move black knight from g8 to e7.",
+              "g8f6": "Move black knight from g8 to f6.",
+              "g8h6": "Move black knight from g8 to h6.",
+              "f8a3": "Move black bishop from f8 to a3.",
+              "f8b4": "Move black bishop from f8 to b4.",
+              "f8c5": "Move black bishop from f8 to c5.",
+              "f8d6": "Move black bishop from f8 to d6.",
+              "f8e7": "Move black bishop from f8 to e7.",
+              "e8e7": "Move black king from e8 to e7.",
+              "d8h4": "Move black queen from d8 to h4.",
+              "d8g5": "Move black queen from d8 to g5.",
+              "d8f6": "Move black queen from d8 to f6.",
+              "d8e7": "Move black queen from d8 to e7.",
+              "b8a6": "Move black knight from b8 to a6.",
+              "b8c6": "Move black knight from b8 to c6."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "d8h4",
+        "label": "Qh4#",
+        "description": "Move black queen from d8 to h4.",
+        "confidence": 0.37,
+        "probabilities": [
+          {
+            "id": "d8h4",
+            "label": "Qh4#",
+            "description": "Move black queen from d8 to h4.",
+            "probability": 0.39
+          },
+          {
+            "id": "g8f6",
+            "label": "Nf6",
+            "description": "Move black knight from g8 to f6.",
+            "probability": 0.2
+          },
+          {
+            "id": "d8g5",
+            "label": "Qg5",
+            "description": "Move black queen from d8 to g5.",
+            "probability": 0.09
+          },
+          {
+            "id": "e5e4",
+            "label": "e4",
+            "description": "Move black pawn from e5 to e4.",
+            "probability": 0.05
+          },
+          {
+            "id": "g7g5",
+            "label": "g5",
+            "description": "Move black pawn from g7 to g5.",
+            "probability": 0.03
+          },
+          {
+            "id": "d7d5",
+            "label": "d5",
+            "description": "Move black pawn from d7 to d5.",
+            "probability": 0.03
+          },
+          {
+            "id": "f8c5",
+            "label": "Bc5",
+            "description": "Move black bishop from f8 to c5.",
+            "probability": 0.03
+          },
+          {
+            "id": "b8c6",
+            "label": "Nc6",
+            "description": "Move black knight from b8 to c6.",
+            "probability": 0.03
+          },
+          {
+            "id": "f7f5",
+            "label": "f5",
+            "description": "Move black pawn from f7 to f5.",
+            "probability": 0.02
+          },
+          {
+            "id": "f8a3",
+            "label": "Ba3",
+            "description": "Move black bishop from f8 to a3.",
+            "probability": 0.02
+          },
+          {
+            "id": "h7h5",
+            "label": "h5",
+            "description": "Move black pawn from h7 to h5.",
+            "probability": 0.01
+          },
+          {
+            "id": "g7g6",
+            "label": "g6",
+            "description": "Move black pawn from g7 to g6.",
+            "probability": 0.01
+          },
+          {
+            "id": "f7f6",
+            "label": "f6",
+            "description": "Move black pawn from f7 to f6.",
+            "probability": 0.01
+          },
+          {
+            "id": "d7d6",
+            "label": "d6",
+            "description": "Move black pawn from d7 to d6.",
+            "probability": 0.01
+          },
+          {
+            "id": "c7c5",
+            "label": "c5",
+            "description": "Move black pawn from c7 to c5.",
+            "probability": 0.01
+          },
+          {
+            "id": "g8h6",
+            "label": "Nh6",
+            "description": "Move black knight from g8 to h6.",
+            "probability": 0.01
+          },
+          {
+            "id": "f8b4",
+            "label": "Bb4",
+            "description": "Move black bishop from f8 to b4.",
+            "probability": 0.01
+          },
+          {
+            "id": "f8d6",
+            "label": "Bd6",
+            "description": "Move black bishop from f8 to d6.",
+            "probability": 0.01
+          },
+          {
+            "id": "f8e7",
+            "label": "Be7",
+            "description": "Move black bishop from f8 to e7.",
+            "probability": 0.01
+          },
+          {
+            "id": "d8f6",
+            "label": "Qf6",
+            "description": "Move black queen from d8 to f6.",
+            "probability": 0.01
+          },
+          {
+            "id": "d8e7",
+            "label": "Qe7",
+            "description": "Move black queen from d8 to e7.",
+            "probability": 0.01
+          },
+          {
+            "id": "h7h6",
+            "label": "h6",
+            "description": "Move black pawn from h7 to h6.",
+            "probability": 0
+          },
+          {
+            "id": "c7c6",
+            "label": "c6",
+            "description": "Move black pawn from c7 to c6.",
+            "probability": 0
+          },
+          {
+            "id": "b7b5",
+            "label": "b5",
+            "description": "Move black pawn from b7 to b5.",
+            "probability": 0
+          },
+          {
+            "id": "b7b6",
+            "label": "b6",
+            "description": "Move black pawn from b7 to b6.",
+            "probability": 0
+          },
+          {
+            "id": "a7a5",
+            "label": "a5",
+            "description": "Move black pawn from a7 to a5.",
+            "probability": 0
+          },
+          {
+            "id": "a7a6",
+            "label": "a6",
+            "description": "Move black pawn from a7 to a6.",
+            "probability": 0
+          },
+          {
+            "id": "g8e7",
+            "label": "Ne7",
+            "description": "Move black knight from g8 to e7.",
+            "probability": 0
+          },
+          {
+            "id": "e8e7",
+            "label": "Ke7",
+            "description": "Move black king from e8 to e7.",
+            "probability": 0
+          },
+          {
+            "id": "b8a6",
+            "label": "Na6",
+            "description": "Move black knight from b8 to a6.",
+            "probability": 0
+          }
+        ],
+        "usage": {
+          "inputTokens": 1380,
+          "outputTokens": 320,
+          "cost": 0.00005796
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 222,
+        "legalCount": 30,
+        "side": "Black"
+      },
+      "outcome": {
+        "winner": "Black",
+        "reason": "Checkmate"
+      }
+    },
+    {
+      "game": "chess",
+      "scenario": "back-rank",
+      "order": "normal",
+      "expected": "e1e8",
+      "passed": true,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "chess",
+          "side_to_move": "White",
+          "fen": "6k1/5ppp/8/8/8/8/5PPP/4R1K1 w - - 0 1",
+          "pieces": {
+            "white": [
+              "pawn on f2",
+              "pawn on g2",
+              "pawn on h2",
+              "rook on e1",
+              "king on g1"
+            ],
+            "black": [
+              "king on g8",
+              "pawn on f7",
+              "pawn on g7",
+              "pawn on h7"
+            ]
+          },
+          "recent_moves": [],
+          "goal": "Win by checkmate. Choose your own move from the legal options."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest chess move for White in this position. Select one of the legal moves. Aim to win by checkmate; protect your king and pieces.",
+            "criteria": {
+              "f2f3": "Move white pawn from f2 to f3.",
+              "f2f4": "Move white pawn from f2 to f4.",
+              "g2g3": "Move white pawn from g2 to g3.",
+              "g2g4": "Move white pawn from g2 to g4.",
+              "h2h3": "Move white pawn from h2 to h3.",
+              "h2h4": "Move white pawn from h2 to h4.",
+              "e1e2": "Move white rook from e1 to e2.",
+              "e1e3": "Move white rook from e1 to e3.",
+              "e1e4": "Move white rook from e1 to e4.",
+              "e1e5": "Move white rook from e1 to e5.",
+              "e1e6": "Move white rook from e1 to e6.",
+              "e1e7": "Move white rook from e1 to e7.",
+              "e1e8": "Move white rook from e1 to e8.",
+              "e1f1": "Move white rook from e1 to f1.",
+              "e1d1": "Move white rook from e1 to d1.",
+              "e1c1": "Move white rook from e1 to c1.",
+              "e1b1": "Move white rook from e1 to b1.",
+              "e1a1": "Move white rook from e1 to a1.",
+              "g1h1": "Move white king from g1 to h1.",
+              "g1f1": "Move white king from g1 to f1."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "e1e8",
+        "label": "Re8#",
+        "description": "Move white rook from e1 to e8.",
+        "confidence": 0.74,
+        "probabilities": [
+          {
+            "id": "e1e8",
+            "label": "Re8#",
+            "description": "Move white rook from e1 to e8.",
+            "probability": 0.76
+          },
+          {
+            "id": "e1e7",
+            "label": "Re7",
+            "description": "Move white rook from e1 to e7.",
+            "probability": 0.09
+          },
+          {
+            "id": "e1f1",
+            "label": "Rf1",
+            "description": "Move white rook from e1 to f1.",
+            "probability": 0.04
+          },
+          {
+            "id": "e1e6",
+            "label": "Re6",
+            "description": "Move white rook from e1 to e6.",
+            "probability": 0.03
+          },
+          {
+            "id": "f2f3",
+            "label": "f3",
+            "description": "Move white pawn from f2 to f3.",
+            "probability": 0.02
+          },
+          {
+            "id": "f2f4",
+            "label": "f4",
+            "description": "Move white pawn from f2 to f4.",
+            "probability": 0.01
+          },
+          {
+            "id": "g2g3",
+            "label": "g3",
+            "description": "Move white pawn from g2 to g3.",
+            "probability": 0.01
+          },
+          {
+            "id": "g2g4",
+            "label": "g4",
+            "description": "Move white pawn from g2 to g4.",
+            "probability": 0.01
+          },
+          {
+            "id": "e1e2",
+            "label": "Re2",
+            "description": "Move white rook from e1 to e2.",
+            "probability": 0.01
+          },
+          {
+            "id": "g1h1",
+            "label": "Kh1",
+            "description": "Move white king from g1 to h1.",
+            "probability": 0.01
+          },
+          {
+            "id": "g1f1",
+            "label": "Kf1",
+            "description": "Move white king from g1 to f1.",
+            "probability": 0.01
+          },
+          {
+            "id": "h2h3",
+            "label": "h3",
+            "description": "Move white pawn from h2 to h3.",
+            "probability": 0
+          },
+          {
+            "id": "h2h4",
+            "label": "h4",
+            "description": "Move white pawn from h2 to h4.",
+            "probability": 0
+          },
+          {
+            "id": "e1e3",
+            "label": "Re3",
+            "description": "Move white rook from e1 to e3.",
+            "probability": 0
+          },
+          {
+            "id": "e1e4",
+            "label": "Re4",
+            "description": "Move white rook from e1 to e4.",
+            "probability": 0
+          },
+          {
+            "id": "e1e5",
+            "label": "Re5",
+            "description": "Move white rook from e1 to e5.",
+            "probability": 0
+          },
+          {
+            "id": "e1d1",
+            "label": "Rd1",
+            "description": "Move white rook from e1 to d1.",
+            "probability": 0
+          },
+          {
+            "id": "e1c1",
+            "label": "Rc1",
+            "description": "Move white rook from e1 to c1.",
+            "probability": 0
+          },
+          {
+            "id": "e1b1",
+            "label": "Rb1",
+            "description": "Move white rook from e1 to b1.",
+            "probability": 0
+          },
+          {
+            "id": "e1a1",
+            "label": "Ra1",
+            "description": "Move white rook from e1 to a1.",
+            "probability": 0
+          }
+        ],
+        "usage": {
+          "inputTokens": 968,
+          "outputTokens": 220,
+          "cost": 0.000040656
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 251,
+        "legalCount": 20,
+        "side": "White"
+      },
+      "outcome": {
+        "winner": "White",
+        "reason": "Checkmate"
+      }
+    },
+    {
+      "game": "chess",
+      "scenario": "back-rank",
+      "order": "reversed",
+      "expected": "e1e8",
+      "passed": true,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "chess",
+          "side_to_move": "White",
+          "fen": "6k1/5ppp/8/8/8/8/5PPP/4R1K1 w - - 0 1",
+          "pieces": {
+            "white": [
+              "pawn on f2",
+              "pawn on g2",
+              "pawn on h2",
+              "rook on e1",
+              "king on g1"
+            ],
+            "black": [
+              "king on g8",
+              "pawn on f7",
+              "pawn on g7",
+              "pawn on h7"
+            ]
+          },
+          "recent_moves": [],
+          "goal": "Win by checkmate. Choose your own move from the legal options."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest chess move for White in this position. Select one of the legal moves. Aim to win by checkmate; protect your king and pieces.",
+            "criteria": {
+              "g1f1": "Move white king from g1 to f1.",
+              "g1h1": "Move white king from g1 to h1.",
+              "e1a1": "Move white rook from e1 to a1.",
+              "e1b1": "Move white rook from e1 to b1.",
+              "e1c1": "Move white rook from e1 to c1.",
+              "e1d1": "Move white rook from e1 to d1.",
+              "e1f1": "Move white rook from e1 to f1.",
+              "e1e8": "Move white rook from e1 to e8.",
+              "e1e7": "Move white rook from e1 to e7.",
+              "e1e6": "Move white rook from e1 to e6.",
+              "e1e5": "Move white rook from e1 to e5.",
+              "e1e4": "Move white rook from e1 to e4.",
+              "e1e3": "Move white rook from e1 to e3.",
+              "e1e2": "Move white rook from e1 to e2.",
+              "h2h4": "Move white pawn from h2 to h4.",
+              "h2h3": "Move white pawn from h2 to h3.",
+              "g2g4": "Move white pawn from g2 to g4.",
+              "g2g3": "Move white pawn from g2 to g3.",
+              "f2f4": "Move white pawn from f2 to f4.",
+              "f2f3": "Move white pawn from f2 to f3."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "e1e8",
+        "label": "Re8#",
+        "description": "Move white rook from e1 to e8.",
+        "confidence": 0.71,
+        "probabilities": [
+          {
+            "id": "e1e8",
+            "label": "Re8#",
+            "description": "Move white rook from e1 to e8.",
+            "probability": 0.73
+          },
+          {
+            "id": "e1e7",
+            "label": "Re7",
+            "description": "Move white rook from e1 to e7.",
+            "probability": 0.1
+          },
+          {
+            "id": "e1f1",
+            "label": "Rf1",
+            "description": "Move white rook from e1 to f1.",
+            "probability": 0.06
+          },
+          {
+            "id": "f2f3",
+            "label": "f3",
+            "description": "Move white pawn from f2 to f3.",
+            "probability": 0.02
+          },
+          {
+            "id": "g1f1",
+            "label": "Kf1",
+            "description": "Move white king from g1 to f1.",
+            "probability": 0.01
+          },
+          {
+            "id": "g1h1",
+            "label": "Kh1",
+            "description": "Move white king from g1 to h1.",
+            "probability": 0.01
+          },
+          {
+            "id": "e1e6",
+            "label": "Re6",
+            "description": "Move white rook from e1 to e6.",
+            "probability": 0.01
+          },
+          {
+            "id": "e1e5",
+            "label": "Re5",
+            "description": "Move white rook from e1 to e5.",
+            "probability": 0.01
+          },
+          {
+            "id": "e1e3",
+            "label": "Re3",
+            "description": "Move white rook from e1 to e3.",
+            "probability": 0.01
+          },
+          {
+            "id": "e1e2",
+            "label": "Re2",
+            "description": "Move white rook from e1 to e2.",
+            "probability": 0.01
+          },
+          {
+            "id": "g2g4",
+            "label": "g4",
+            "description": "Move white pawn from g2 to g4.",
+            "probability": 0.01
+          },
+          {
+            "id": "g2g3",
+            "label": "g3",
+            "description": "Move white pawn from g2 to g3.",
+            "probability": 0.01
+          },
+          {
+            "id": "f2f4",
+            "label": "f4",
+            "description": "Move white pawn from f2 to f4.",
+            "probability": 0.01
+          },
+          {
+            "id": "e1a1",
+            "label": "Ra1",
+            "description": "Move white rook from e1 to a1.",
+            "probability": 0
+          },
+          {
+            "id": "e1b1",
+            "label": "Rb1",
+            "description": "Move white rook from e1 to b1.",
+            "probability": 0
+          },
+          {
+            "id": "e1c1",
+            "label": "Rc1",
+            "description": "Move white rook from e1 to c1.",
+            "probability": 0
+          },
+          {
+            "id": "e1d1",
+            "label": "Rd1",
+            "description": "Move white rook from e1 to d1.",
+            "probability": 0
+          },
+          {
+            "id": "e1e4",
+            "label": "Re4",
+            "description": "Move white rook from e1 to e4.",
+            "probability": 0
+          },
+          {
+            "id": "h2h4",
+            "label": "h4",
+            "description": "Move white pawn from h2 to h4.",
+            "probability": 0
+          },
+          {
+            "id": "h2h3",
+            "label": "h3",
+            "description": "Move white pawn from h2 to h3.",
+            "probability": 0
+          }
+        ],
+        "usage": {
+          "inputTokens": 968,
+          "outputTokens": 220,
+          "cost": 0.000040656
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 249,
+        "legalCount": 20,
+        "side": "White"
+      },
+      "outcome": {
+        "winner": "White",
+        "reason": "Checkmate"
+      }
+    },
+    {
+      "game": "connect",
+      "scenario": "opening",
+      "order": "normal",
+      "expected": null,
+      "passed": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Red",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "board_rows_top_to_bottom": [
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ]
+          ],
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Red. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a red disc into column 1.",
+              "2": "Drop a red disc into column 2.",
+              "3": "Drop a red disc into column 3.",
+              "4": "Drop a red disc into column 4.",
+              "5": "Drop a red disc into column 5.",
+              "6": "Drop a red disc into column 6.",
+              "7": "Drop a red disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "4",
+        "label": "4",
+        "description": "Drop a red disc into column 4.",
+        "confidence": 0.9,
+        "probabilities": [
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a red disc into column 4.",
+            "probability": 0.92
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a red disc into column 1.",
+            "probability": 0.05
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a red disc into column 3.",
+            "probability": 0.03
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a red disc into column 2.",
+            "probability": 0
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a red disc into column 5.",
+            "probability": 0
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a red disc into column 6.",
+            "probability": 0
+          },
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a red disc into column 7.",
+            "probability": 0
+          }
+        ],
+        "usage": {
+          "inputTokens": 746,
+          "outputTokens": 66,
+          "cost": 0.000031332
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 259,
+        "legalCount": 7,
+        "side": "Red"
+      },
+      "outcome": null
+    },
+    {
+      "game": "connect",
+      "scenario": "opening",
+      "order": "reversed",
+      "expected": null,
+      "passed": null,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Red",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "board_rows_top_to_bottom": [
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ]
+          ],
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Red. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a red disc into column 1.",
+              "2": "Drop a red disc into column 2.",
+              "3": "Drop a red disc into column 3.",
+              "4": "Drop a red disc into column 4.",
+              "5": "Drop a red disc into column 5.",
+              "6": "Drop a red disc into column 6.",
+              "7": "Drop a red disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "4",
+        "label": "4",
+        "description": "Drop a red disc into column 4.",
+        "confidence": 0.91,
+        "probabilities": [
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a red disc into column 4.",
+            "probability": 0.93
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a red disc into column 1.",
+            "probability": 0.05
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a red disc into column 3.",
+            "probability": 0.02
+          },
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a red disc into column 7.",
+            "probability": 0
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a red disc into column 6.",
+            "probability": 0
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a red disc into column 5.",
+            "probability": 0
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a red disc into column 2.",
+            "probability": 0
+          }
+        ],
+        "usage": {
+          "inputTokens": 746,
+          "outputTokens": 66,
+          "cost": 0.000031332
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 198,
+        "legalCount": 7,
+        "side": "Red"
+      },
+      "outcome": null
+    },
+    {
+      "game": "connect",
+      "scenario": "win-now",
+      "order": "normal",
+      "expected": "4",
+      "passed": false,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Red",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "board_rows_top_to_bottom": [
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "Yellow"
+            ],
+            [
+              "Red",
+              "Red",
+              "Red",
+              "empty",
+              "empty",
+              "Yellow",
+              "Yellow"
+            ]
+          ],
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Red. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a red disc into column 1.",
+              "2": "Drop a red disc into column 2.",
+              "3": "Drop a red disc into column 3.",
+              "4": "Drop a red disc into column 4.",
+              "5": "Drop a red disc into column 5.",
+              "6": "Drop a red disc into column 6.",
+              "7": "Drop a red disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "7",
+        "label": "7",
+        "description": "Drop a red disc into column 7.",
+        "confidence": 0.15,
+        "probabilities": [
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a red disc into column 7.",
+            "probability": 0.26
+          },
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a red disc into column 4.",
+            "probability": 0.21
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a red disc into column 3.",
+            "probability": 0.15
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a red disc into column 6.",
+            "probability": 0.14
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a red disc into column 1.",
+            "probability": 0.13
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a red disc into column 5.",
+            "probability": 0.09
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a red disc into column 2.",
+            "probability": 0.02
+          }
+        ],
+        "usage": {
+          "inputTokens": 746,
+          "outputTokens": 66,
+          "cost": 0.000031332
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 198,
+        "legalCount": 7,
+        "side": "Red"
+      },
+      "outcome": null
+    },
+    {
+      "game": "connect",
+      "scenario": "win-now",
+      "order": "reversed",
+      "expected": "4",
+      "passed": true,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Red",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "board_rows_top_to_bottom": [
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "Yellow"
+            ],
+            [
+              "Red",
+              "Red",
+              "Red",
+              "empty",
+              "empty",
+              "Yellow",
+              "Yellow"
+            ]
+          ],
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Red. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a red disc into column 1.",
+              "2": "Drop a red disc into column 2.",
+              "3": "Drop a red disc into column 3.",
+              "4": "Drop a red disc into column 4.",
+              "5": "Drop a red disc into column 5.",
+              "6": "Drop a red disc into column 6.",
+              "7": "Drop a red disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "4",
+        "label": "4",
+        "description": "Drop a red disc into column 4.",
+        "confidence": 0.19,
+        "probabilities": [
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a red disc into column 4.",
+            "probability": 0.3
+          },
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a red disc into column 7.",
+            "probability": 0.25
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a red disc into column 3.",
+            "probability": 0.12
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a red disc into column 1.",
+            "probability": 0.12
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a red disc into column 6.",
+            "probability": 0.11
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a red disc into column 5.",
+            "probability": 0.08
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a red disc into column 2.",
+            "probability": 0.02
+          }
+        ],
+        "usage": {
+          "inputTokens": 746,
+          "outputTokens": 66,
+          "cost": 0.000031332
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 233,
+        "legalCount": 7,
+        "side": "Red"
+      },
+      "outcome": {
+        "winner": "Red",
+        "cells": [
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ]
+        ],
+        "reason": "Four in a row"
+      }
+    },
+    {
+      "game": "connect",
+      "scenario": "block-now",
+      "order": "normal",
+      "expected": "4",
+      "passed": true,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Yellow",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "board_rows_top_to_bottom": [
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "Yellow"
+            ],
+            [
+              "Red",
+              "Red",
+              "Red",
+              "empty",
+              "empty",
+              "empty",
+              "Yellow"
+            ]
+          ],
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Yellow. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a yellow disc into column 1.",
+              "2": "Drop a yellow disc into column 2.",
+              "3": "Drop a yellow disc into column 3.",
+              "4": "Drop a yellow disc into column 4.",
+              "5": "Drop a yellow disc into column 5.",
+              "6": "Drop a yellow disc into column 6.",
+              "7": "Drop a yellow disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "4",
+        "label": "4",
+        "description": "Drop a yellow disc into column 4.",
+        "confidence": 0.46,
+        "probabilities": [
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a yellow disc into column 4.",
+            "probability": 0.55
+          },
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a yellow disc into column 7.",
+            "probability": 0.15
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a yellow disc into column 3.",
+            "probability": 0.14
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a yellow disc into column 1.",
+            "probability": 0.09
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a yellow disc into column 6.",
+            "probability": 0.03
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a yellow disc into column 2.",
+            "probability": 0.02
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a yellow disc into column 5.",
+            "probability": 0.02
+          }
+        ],
+        "usage": {
+          "inputTokens": 746,
+          "outputTokens": 66,
+          "cost": 0.000031332
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 876,
+        "legalCount": 7,
+        "side": "Yellow"
+      },
+      "outcome": null
+    },
+    {
+      "game": "connect",
+      "scenario": "block-now",
+      "order": "reversed",
+      "expected": "4",
+      "passed": true,
+      "request": {
+        "model": "typesafe/jev-1.13",
+        "state": {
+          "game": "Connect Four",
+          "side_to_move": "Yellow",
+          "rules": "Drop a disc into a column. It falls into the lowest empty cell. First to make four of their own discs in a horizontal, vertical, or diagonal line wins.",
+          "board_rows_top_to_bottom": [
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty"
+            ],
+            [
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "empty",
+              "Yellow"
+            ],
+            [
+              "Red",
+              "Red",
+              "Red",
+              "empty",
+              "empty",
+              "empty",
+              "Yellow"
+            ]
+          ],
+          "columns_left_to_right": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "goal": "Choose the best column for the player whose turn it is. Win if possible; otherwise prevent the opponent from winning."
+        },
+        "questions": {
+          "move": {
+            "type": "choice",
+            "instructions": "Choose the strongest Connect Four move for Yellow. Select one legal column. Make four in a row or block the opponent's immediate winning threat.",
+            "criteria": {
+              "1": "Drop a yellow disc into column 1.",
+              "2": "Drop a yellow disc into column 2.",
+              "3": "Drop a yellow disc into column 3.",
+              "4": "Drop a yellow disc into column 4.",
+              "5": "Drop a yellow disc into column 5.",
+              "6": "Drop a yellow disc into column 6.",
+              "7": "Drop a yellow disc into column 7."
+            }
+          }
+        }
+      },
+      "result": {
+        "choice": "4",
+        "label": "4",
+        "description": "Drop a yellow disc into column 4.",
+        "confidence": 0.44,
+        "probabilities": [
+          {
+            "id": "4",
+            "label": "4",
+            "description": "Drop a yellow disc into column 4.",
+            "probability": 0.52
+          },
+          {
+            "id": "7",
+            "label": "7",
+            "description": "Drop a yellow disc into column 7.",
+            "probability": 0.19
+          },
+          {
+            "id": "3",
+            "label": "3",
+            "description": "Drop a yellow disc into column 3.",
+            "probability": 0.11
+          },
+          {
+            "id": "1",
+            "label": "1",
+            "description": "Drop a yellow disc into column 1.",
+            "probability": 0.11
+          },
+          {
+            "id": "6",
+            "label": "6",
+            "description": "Drop a yellow disc into column 6.",
+            "probability": 0.03
+          },
+          {
+            "id": "5",
+            "label": "5",
+            "description": "Drop a yellow disc into column 5.",
+            "probability": 0.02
+          },
+          {
+            "id": "2",
+            "label": "2",
+            "description": "Drop a yellow disc into column 2.",
+            "probability": 0.02
+          }
+        ],
+        "usage": {
+          "inputTokens": 746,
+          "outputTokens": 66,
+          "cost": 0.000031332
+        },
+        "model": "typesafe/jev-1.13",
+        "latencyMs": 210,
+        "legalCount": 7,
+        "side": "Yellow"
+      },
+      "outcome": null
+    }
+  ]
+}
